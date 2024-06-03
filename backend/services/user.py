@@ -28,7 +28,7 @@ def read_user(user_id: int):
     user = cursor.fetchone()
     conn.close()
     if user:
-        return {"name": user[0]}
+        return {"name": user[0], "username": user[1], "password": user[2]}
     else:
         return {"message": "User not found"}
 

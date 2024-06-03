@@ -33,18 +33,6 @@ def read_story(story_id: int):
         return {"title": story[0], "description": story[1], "category": story[2]}
     else:
         return {"message": "Story not found"}
-    
-@router.get("/story/")
-def read_story():
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    cursor.execute('''SELECT * FROM story''')
-    stories = cursor.fetchall()
-    conn.close()
-    if stories:
-        return [{"id": row[0], "title": row[1], "description": row[2], "category": row[3]} for row in stories]
-    else:
-        return {"message": "No stories found"}
 
 # Update
 @router.put("/story/{story_id}")
