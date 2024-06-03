@@ -9,7 +9,7 @@ Execute o comando no terminal: `pip install fastapi uvicorn pydantic`
 #### 2. Navegue até o diretório correto
 
 Certifique-se que está na raiz do projeto.
-Execute o comando no terminal: `cd backend`
+Execute o comando no terminal: `cd src/backend`
 
 #### 3. Inicie o servidor
 
