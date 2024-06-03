@@ -4,7 +4,7 @@
 
 #### 1. Instale as dependêcias
 
-Execute o comando no terminal: `pip install fastapi uvicorn pydantic`
+Execute o comando no terminal: `pip install fastapi uvicorn pydantic google-generativeai Pillow`
 
 #### 2. Navegue até o diretório correto
 
@@ -226,5 +226,29 @@ Retorna uma mensagem indicando "Usuário deletado com sucesso".
 ```json
 {
   "message": "Usuário deletado com sucesso"
+}
+```
+
+### 2.3 Endpoints para Gemini
+
+#### 2.3.1 Gerar prompt
+
+- POST /user/
+
+Gera um prompt usando a API do Gemini.
+
+#### Corpo da Requisição:
+
+- **prompt (string)**: O prompt a ser enviado para o Gemini.
+
+#### Resposta:
+
+Retorna a resposta da IA.
+
+#### Exemplo:
+
+```json
+{
+  "response": "Olá, esta é a resposta do Gemini!",
 }
 ```
